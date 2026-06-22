@@ -18,7 +18,7 @@ bun add desdecirse
 
 ```ts
 import { desdecirse } from "desdecirse";
-const config = desdecirse(loadConfig);
+const config = desdecirse(() => fetch('https://example.com/config.json').then(r => r.json()));
 ```
 
 ```ts
